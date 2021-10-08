@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'pages.apps.PagesConfig',
+    'cv.apps.CvConfig',
 ]
 
 MIDDLEWARE = [
