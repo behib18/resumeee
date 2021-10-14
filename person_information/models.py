@@ -4,8 +4,8 @@ from django.core.validators import RegexValidator
 
 
 phone_regex = RegexValidator(
-    regex=r"^(\\+98)?9\\d{9}$",
-    message="Phone number must be entered in the following format: '09123456789'.",
+    regex=r"^(\+98)?9\d{9}$",
+    message="Phone number must be entered in the following format: '+989123456789'.",
 )
 
 
@@ -15,7 +15,7 @@ class PersonInfo(models.Model):
     birthday = models.DateField(auto_now=False, auto_now_add=False)
     website = models.URLField()
     phone = models.CharField(
-        validators=[phone_regex], max_length=11, null=True, blank=True
+        validators=[phone_regex], max_length=13, null=True, blank=True
     )
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
