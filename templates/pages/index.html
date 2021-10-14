@@ -1,14 +1,44 @@
 {% extends 'base.html' %} {% block content %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+<section
+	id="hero"
+	class="d-flex align-items-center"
+	style="background: url('{{ person_info.background_image.url }}') top left;background-size: cover;
+background-position: center;"
+>
 	<div
 		class="container d-flex flex-column align-items-center"
 		data-aos="zoom-in"
 		data-aos-delay="100"
 		style="opacity: 100%"
 	>
-		<h1>Kelly Adams</h1>
-		<h2>I'm a professional illustrator from San Francisco</h2>
+		{% if person_info %}
+		<h2
+			style="
+				background: #91ddd4;
+				padding: 12px 40px;
+				border-radius: 50px;
+				text-transform: uppercase;
+				font-size: 36px;
+			"
+		>
+			{{ person_info.user.first_name }} {{ person_info.user.last_name }}
+		</h2>
+		<h3
+			style="
+				background: #5fd8ca;
+				padding: 12px 40px;
+				border-radius: 50px;
+				text-transform: uppercase;
+				margin-top: 30px;
+			"
+		>
+			{{ person_info.home_title }}
+		</h3>
+		{% else %}
+		<h1>nothing to show</h1>
+		{% endif %}
+
 		<a href="{% url 'about' %}" class="btn-about" style="font-size: 22px"
 			>About Me</a
 		>
