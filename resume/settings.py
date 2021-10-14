@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'pages.apps.PagesConfig',
     'cv.apps.CvConfig',
-    'person_information.apps.PersonInformationConfig'
+    'person_information.apps.PersonInformationConfig',
 ]
 
 MIDDLEWARE = [
