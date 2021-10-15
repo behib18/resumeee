@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'person_information.apps.PersonInformationConfig',
     'tech_skills.apps.TechSkillsConfig',
+    'background_info.apps.BackgroundInfoConfig',
 ]
 
 MIDDLEWARE = [
