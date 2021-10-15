@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'person_information.apps.PersonInformationConfig',
     'tech_skills.apps.TechSkillsConfig',
     'background_info.apps.BackgroundInfoConfig',
+    'summary.apps.SummaryConfig',
 ]
 
 MIDDLEWARE = [
