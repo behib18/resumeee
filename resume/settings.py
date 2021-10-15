@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'pages.apps.PagesConfig',
-    'cv.apps.CvConfig',
     'person_information.apps.PersonInformationConfig',
 ]
 
