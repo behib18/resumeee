@@ -20,7 +20,7 @@
         href="{% url 'about' %}">About</a></li>
 
         <li><a 
-            {% if '/resume' == request.path %}
+            {% if '/resume/' == request.path %}
                 class="active"
             {% endif %} 
         href="{% url 'resume' %}">Resume</a></li>
