@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'background_info.apps.BackgroundInfoConfig',
     'summary.apps.SummaryConfig',
     'education.apps.EducationConfig',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
