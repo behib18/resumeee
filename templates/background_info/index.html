@@ -2,27 +2,33 @@
 <main id="main">
 	 <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume" >
-        {% if background_info %}
+        
         <div class="container">
   
           <div class="section-title">
             <h2>Resume</h2>
+            {% if background_info %}
             <p>{{background_info.description}}</p>
+            {% endif %}
           </div>
   
           <div class="row">
             <div class="col-lg-6">
-              <h3 class="resume-title">Sumary</h3>
+              <h3 class="resume-title">Summary</h3>
               <div class="resume-item pb-0">
-                <h4>Alice Barkley</h4>
-                <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+                {% if person_info %}
+                <h4>{{person_info.user.first_name}} {{person_info.user.last_name}}</h4>
+                {% if summary %}
+                <p><em>{{summary.description}}</em></p>
+                {% endif %}
                 <p>
                 <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
+                  <li>{{person_info.city}}, {{person_info.state}}, {{person_info.country}}</li>
+                  <li>{{person_info.phone}}</li>
+                  <li>{{person_info.user.email}}</li>
                 </ul>
                 </p>
+                {% endif %}
               </div>
   
               <h3 class="resume-title">Education</h3>
@@ -72,7 +78,6 @@
   
         </div>
       </section><!-- End Resume Section -->
-      {% endif %}
 </main>
 <!-- End #main -->
 
