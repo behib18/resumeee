@@ -1,6 +1,6 @@
 from tech_skills.models import TechSkills
 from django.contrib import admin
-from .models import TechSkills
+from .models import TechSkills, OtherTechSkills
 
 
 class Tech_SkillsAdmin(admin.ModelAdmin):
@@ -9,3 +9,11 @@ class Tech_SkillsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(TechSkills, Tech_SkillsAdmin)
+
+
+class OtherThechSkillsAdmin(admin.ModelAdmin):
+    list_display = ('skill', )
+    list_display_links = ('skill', )
+
+
+admin.site.register(OtherTechSkills, OtherThechSkillsAdmin)
