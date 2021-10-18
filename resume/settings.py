@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'tech_skills.apps.TechSkillsConfig',
     'background_info.apps.BackgroundInfoConfig',
     'contact.apps.ContactConfig',
+    'projects.apps.ProjectsConfig',
 ]
 
 MIDDLEWARE = [
