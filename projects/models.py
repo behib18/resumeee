@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Project(models.Model):
     name = models.CharField(max_length=80)
     title = models.CharField(max_length=300)
@@ -9,7 +10,11 @@ class Project(models.Model):
     url = models.URLField(blank=True)
     description = models.TextField(max_length=1000)
     run = models.BooleanField(default=False)
-    # if run = True 
+    # if run = True
     # means you can run the prject here(online)
     ckilck = models.URLField(blank=True)
 
+
+class Photo(models.Model):
+    image = models.ForeignKey(
+        Project, on_delete=models.CASCADE)
