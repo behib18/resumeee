@@ -14,3 +14,10 @@ class Education(models.Model):
     start_date = models.CharField(max_length=10)
     end_date = models.CharField(max_length=10)
     description = models.TextField(max_length=500)
+
+
+class Experience(models.Model):
+    title = models.CharField(max_length=150)
+    start_date = models.CharField(max_length=10)
+    end_date = models.CharField(max_length=10)
+    description = models.TextField(max_length=500)

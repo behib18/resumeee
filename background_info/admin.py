@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Background, Summary, Education
+from .models import Background, Experience, Summary, Education
 
 
 class SummaryAdmin(admin.ModelAdmin):
@@ -31,3 +31,11 @@ class EducationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Education, EducationAdmin)
+
+
+class ExperienceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description')
+    list_display_links = ('title', 'description')
+
+
+admin.site.register(Experience, ExperienceAdmin)
