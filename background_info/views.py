@@ -1,8 +1,7 @@
-from summary.models import Summary
+from .models import Summary, Education
 from background_info.models import Background
 from django.shortcuts import render
 from person_information.models import PersonInfo
-from education.models import Education
 
 
 def index(request):

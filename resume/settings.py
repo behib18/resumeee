@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'person_information.apps.PersonInformationConfig',
     'tech_skills.apps.TechSkillsConfig',
     'background_info.apps.BackgroundInfoConfig',
-    'summary.apps.SummaryConfig',
-    'education.apps.EducationConfig',
     'contact.apps.ContactConfig',
 ]
 
