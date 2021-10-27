@@ -19,3 +19,10 @@ class Photo(models.Model):
     project = models.ForeignKey(
         Project, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='photos')
+
+
+class Video(models.Model):
+    project = models.ForeignKey(
+        Project, on_delete=models.CASCADE)
+    caption = models.CharField(max_length=150, blank=True)
+    video = models.FileField(upload_to='video')

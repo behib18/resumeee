@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, Photo
+from .models import Project, Photo, Video
 
 
 class ProjectsAdmin(admin.ModelAdmin):
@@ -16,3 +16,11 @@ class PhotoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Photo)
+
+
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ('caption', )
+    list_display_links = ('caption', )
+
+
+admin.site.register(Video, VideoAdmin)
