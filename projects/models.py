@@ -16,5 +16,6 @@ class Project(models.Model):
 
 
 class Photo(models.Model):
-    image = models.ForeignKey(
+    project = models.ForeignKey(
         Project, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='photos')

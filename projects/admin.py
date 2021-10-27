@@ -11,8 +11,8 @@ admin.site.register(Project, ProjectsAdmin)
 
 
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ('id', )
-    list_display_links = ('id', )
+    list_display = ('image', )
+    list_display_links = ('image', )
 
 
-admin.site.register(Photo, PhotoAdmin)
+admin.site.register(Photo)

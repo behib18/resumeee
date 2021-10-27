@@ -33,9 +33,9 @@
 						</svg>
 						<i class="bx bx-slideshow"></i>
 					</div>
-					<h4><a href="">{{project.name}}</a></h4>
+					<h4>{{project.name}}</h4>
 					<p class="text-truncate">{{project.title}}</p>
-					<p>Quis consequaor consequuntur</p>
+					<a href="{% url 'project' project.id %}">Click here for more info</a>
 				</div>
 			</div>
 			{% endfor %}
