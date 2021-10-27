@@ -40,9 +40,14 @@ def project(request, project_id):
 
 
 def video(request, project_id):
+
+    # person_info record
+    person_info = PersonInfo.objects.get()
+     
     videos = Video.objects.filter(project__pk=project_id)
 
     context = {
+        'person_info': person_info,
         'videos': videos,
     }
     return render(request, 'projects/video.html', context)
