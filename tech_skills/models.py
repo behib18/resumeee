@@ -1,11 +1,18 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class TechSkills(models.Model):
     skill = models.CharField(max_length=50)
-    quantity = models.IntegerField(
-        validators=[MaxValueValidator(100), MinValueValidator(1)])
+    quality_choices = (
+        ('basic', 'basic'),
+        ('lower intermediate', 'lower intermediate'),
+        ('intermediate', 'intermediate'),
+        ('upper intermediate', 'upper intermediate'),
+        ('advance', 'advance'),
+        ('expert', 'expert'),
+    )
+    quality = models.CharField(
+        max_length=20, choices=quality_choices, default='basic')
 
 
 class OtherTechSkills(models.Model):

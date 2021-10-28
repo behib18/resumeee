@@ -4,8 +4,8 @@ from .models import TechSkills, OtherTechSkills
 
 
 class Tech_SkillsAdmin(admin.ModelAdmin):
-    list_display = ('skill', 'quantity')
-    list_display_links = ('skill', 'quantity')
+    list_display = ('skill', 'quality')
+    list_display_links = ('skill', 'quality')
 
 
 admin.site.register(TechSkills, Tech_SkillsAdmin)
