@@ -79,6 +79,12 @@
 								<a href="{% url 'video' project.id %}">Click here</a>
 							</li>
 							{% endif %}
+							{% if project.doc_display %}
+							<li>
+								<strong>Document</strong>:
+								<a href="{{project.document.url}}">Click here</a>
+							</li>
+							{% endif %}
 						</ul>
 					</div>
 					<div class="portfolio-description">

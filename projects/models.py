@@ -9,16 +9,22 @@ class Project(models.Model):
     date = models.CharField(max_length=50, blank=True)
     url = models.URLField(blank=True)
     description = models.TextField(max_length=1000)
-    run = models.BooleanField(default=False)
+    doc_display = models.BooleanField(default=False)
     # if run = True
     # means you can run the prject here(online)
-    ckilck = models.URLField(blank=True)
+    document = models.FileField(blank=True, upload_to='doc')
+
+    def __str__(self):
+        return self.name
 
 
 class Photo(models.Model):
     project = models.ForeignKey(
         Project, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='photos')
+
+    def __str__(self):
+        return self.image
 
 
 class Video(models.Model):
