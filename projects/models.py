@@ -24,7 +24,7 @@ class Photo(models.Model):
     image = models.ImageField(upload_to='photos')
 
     def __str__(self):
-        return self.image
+        return self.image.url
 
 
 class Video(models.Model):

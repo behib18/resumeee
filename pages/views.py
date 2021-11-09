@@ -19,6 +19,8 @@ def about(request):
 
     # tech_skills records
     tech_skills = TechSkills.objects.all()
+    order = ['expert','advance','upper intermediate', 'intermediate', 'lower intermediate','basic' ]
+    tech_skills = sorted(tech_skills, key=lambda x: order.index(x.quality))
 
     # tech_skills records
     other_skills = OtherTechSkills.objects.all()

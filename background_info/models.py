@@ -21,3 +21,13 @@ class Experience(models.Model):
     start_date = models.CharField(max_length=10)
     end_date = models.CharField(max_length=10)
     description = models.TextField(max_length=500)
+
+class Licence(models.Model):
+    title = models.CharField(max_length=150)
+    Year = models.CharField(max_length=50)
+    description = models.TextField(max_length=500, blank=True)
+
+class Language(models.Model):
+    title = models.CharField(max_length=150)
+    level = models.CharField(max_length=80)
+    description = models.TextField(max_length=500, blank=True)

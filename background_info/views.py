@@ -12,10 +12,10 @@ def index(request):
     # summary record
     summary = Summary.objects.get()
     # educations record
-    educations = Education.objects.all()
+    educations = Education.objects.all().order_by('-id')
 
     # experiences record
-    experiences = Experience.objects.all()
+    experiences = Experience.objects.all().order_by('-id')
 
     context = {
         'background_info': background_info,

@@ -46,9 +46,10 @@
 
             <!-- WORK EXPERIENCES -->
             {% if experiences %}
-            {% for experience in experiences %}
+            
             <div class="col-lg-6">
               <h3 class="resume-title">Professional Experience</h3>
+              {% for experience in experiences %}
               <div class="resume-item">
                 <h4>{{experience.title}}</h4>
                 <h5>{{experience.start_date}} - {{experience.end_date}}</h5>
@@ -56,9 +57,9 @@
                 {{experience.description}}
                 </p>
               </div>
-              
+              {% endfor %}
             </div>
-            {% endfor %}
+            
             {% endif %}
           </div>
   
