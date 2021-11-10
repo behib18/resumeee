@@ -19,7 +19,7 @@
                 {% if person_info %}
                 <h4>{{person_info.user.first_name}} {{person_info.user.last_name}}</h4>
                 {% if summary %}
-                <p><em>{{summary.description}}</em></p>
+                <p><em>{{summary.description|linebreaks}}</em></p>
                 {% endif %}
                 <p>
                 <ul>
@@ -30,6 +30,8 @@
                 </p>
                 {% endif %}
               </div>
+
+              <!-- education -->
               {% if educations %}
               <h3 class="resume-title">Education</h3>
               {% for education in educations %}
@@ -37,11 +39,44 @@
                 <h4>{{education.title}}</h4>
                 <h5>{{education.start_date}} - {{education.end_date}}</h5>
                 <p><em>{{education.institute_name}}</em></p>
-                <p>{{education.description}}</p>
+                <p>{{education.description|linebreaks}}</p>
               </div>
               {% endfor %}
         
               {% endif %}
+
+              <!-- LICENCES -->
+            {% if licences %}            
+            
+              <h3 class="resume-title">Licence</h3>
+              {% for licence in licences %}
+              <div class="resume-item">
+                <h4>{{licence.title}}</h4>
+                <h5>{{licence.year}}</h5>
+                <p>
+                {{licence.description|linebreaks}}
+                </p>
+              </div>
+              {% endfor %}
+            
+            {% endif %}
+
+            <!-- Language -->
+            {% if languages %}            
+            
+              <h3 class="resume-title">Language</h3>
+              {% for language in languages %}
+              <div class="resume-item">
+                <h4>{{language.title}}</h4>
+                <h5>{{language.level}}</h5>
+                <p>
+                {{language.description|linebreaks}}
+                </p>
+              </div>
+              {% endfor %}
+            
+            {% endif %}
+
             </div>
 
             <!-- WORK EXPERIENCES -->
@@ -61,6 +96,8 @@
             </div>
             
             {% endif %}
+
+            
           </div>
   
         </div>

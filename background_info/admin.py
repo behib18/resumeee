@@ -50,8 +50,8 @@ admin.site.register(Language, LanguageAdmin)
 
 
 class LicenceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'Year')
-    list_display_links = ('title', 'Year')
+    list_display = ('title', 'year')
+    list_display_links = ('title', 'year')
 
 
 admin.site.register(Licence, LicenceAdmin)

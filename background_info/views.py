@@ -1,4 +1,4 @@
-from .models import Experience, Summary, Education, Experience
+from .models import Experience, Language, Licence, Summary, Education, Experience
 from background_info.models import Background
 from django.shortcuts import render
 from person_information.models import PersonInfo
@@ -17,11 +17,19 @@ def index(request):
     # experiences record
     experiences = Experience.objects.all().order_by('-id')
 
+    # Licence record
+    licences = Licence.objects.all()
+
+    # experiences record
+    languages = Language.objects.all()
+
     context = {
         'background_info': background_info,
         'person_info': person_info,
         'summary': summary,
         'educations': educations,
         'experiences': experiences,
+        'languages': languages,
+        'licences': licences,
     }
     return render(request, 'background_info/index.html', context)
