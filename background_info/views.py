@@ -6,11 +6,11 @@ from person_information.models import PersonInfo
 
 def index(request):
     # background_info record
-    background_info = Background.objects.get()
+    background_info = Background.objects.last()
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
     # summary record
-    summary = Summary.objects.get()
+    summary = Summary.objects.last()
     # educations record
     educations = Education.objects.all().order_by('-id')
 

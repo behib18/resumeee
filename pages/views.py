@@ -6,7 +6,7 @@ from person_information.models import PersonInfo
 
 def index(request):
 
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
     context = {
         'person_info': person_info
     }
@@ -15,7 +15,7 @@ def index(request):
 
 def about(request):
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
 
     # tech_skills records
     tech_skills = TechSkills.objects.all()

@@ -8,7 +8,7 @@ def index(request):
     projects = Project.objects.all()
 
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
 
     context = {
         'projects': projects,
@@ -22,7 +22,7 @@ def project(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
 
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
 
     # image records
     images = Photo.objects.filter(project__pk=project_id)
@@ -42,7 +42,7 @@ def project(request, project_id):
 def video(request, project_id):
 
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
      
     videos = Video.objects.filter(project__pk=project_id)
 

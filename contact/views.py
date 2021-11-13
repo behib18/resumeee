@@ -8,9 +8,9 @@ from django.http import HttpResponseRedirect
 
 def index(request):
     # person_info record
-    person_info = PersonInfo.objects.get()
+    person_info = PersonInfo.objects.last()
     # Contact record
-    contact = Contact.objects.get()
+    contact = Contact.objects.last()
 
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
