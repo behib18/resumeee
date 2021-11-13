@@ -1,10 +1,5 @@
 from django.contrib import admin
-from .models import ContactForm, Contact
-
-class ContactFormAdmin(admin.ModelAdmin):
-    list_display = ('your_name', 'subject')
-    list_display_links = ('your_name', 'subject')
-admin.site.register(ContactForm, ContactFormAdmin)
+from .models import Contact
 
 
 class ContactAdmin(admin.ModelAdmin):
